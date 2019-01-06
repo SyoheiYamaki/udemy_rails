@@ -1,24 +1,29 @@
-# README
+# udemy_rails
+for study rails by Udemy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby: 2.3.5
+Rails: 5.0.0.1
+MySQL: 5.7
 
-Things you may want to cover:
+1.create new app
+```
+$ docker-compose run web rails new . --forcce --database=mysql
+$ docker-compose build 
+```
 
-* Ruby version
+2. edit database.yml
+```
+edit password and host
+```
 
-* System dependencies
+3.start
+```
+$ docker-compose up -d
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+// check
+$ docker-compose ps
+```
+4.db create
+```
+$ docker-compose run web bundle exec rake  db:create
+```
